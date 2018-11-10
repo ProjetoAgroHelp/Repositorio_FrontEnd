@@ -3,7 +3,7 @@ package com.projeto.integrador;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Cadastro extends AppCompatActivity {
+public class CadastroActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
