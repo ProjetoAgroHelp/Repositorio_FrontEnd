@@ -7,43 +7,48 @@
     tools:context="projeto.integrador.main.LoginActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/submeter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="submeter"
+        android:text="@string/submeter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/retorno1"
+        android:id="@+id/login"
         android:layout_width="0dp"
         android:layout_height="25dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/submeter" />
 
     <TextView
-        android:id="@+id/retorno2"
+        android:id="@+id/senha"
         android:layout_width="0dp"
         android:layout_height="25dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/retorno1" />
+        app:layout_constraintTop_toBottomOf="@+id/login" />
 
     <TextView
-        android:id="@+id/retorno3"
+        android:id="@+id/email"
         android:layout_width="0dp"
         android:layout_height="25dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/retorno2" />
+        app:layout_constraintTop_toBottomOf="@+id/senha" />
 </android.support.constraint.ConstraintLayout>
