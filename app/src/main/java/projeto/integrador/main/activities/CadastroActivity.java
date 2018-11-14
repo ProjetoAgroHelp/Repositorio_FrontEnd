@@ -1,7 +1,9 @@
-package com.projeto.integrador;
+package projeto.integrador.main.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.projeto.integrador.R;
 
 public class CadastroActivity extends AppCompatActivity {
 
