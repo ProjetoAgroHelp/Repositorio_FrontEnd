@@ -1,13 +1,15 @@
-package com.projeto.integrador;
+package projeto.integrador.main.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class LoginActivity extends AppCompatActivity {
+import com.projeto.integrador.R;
+
+public class AnuncioActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_anuncio);
     }
 }
