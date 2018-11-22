@@ -20,6 +20,9 @@
         <activity android:name=".Anuncio" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".PropostasActivity"></activity>
+        <activity android:name=".DrawerCreator">
+
+        </activity>
     </application>
 
 </manifest>

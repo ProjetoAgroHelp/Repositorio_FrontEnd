@@ -12,30 +12,18 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-public class PropostasActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, NavigationView.OnNavigationItemSelectedListener {
+public class PropostasActivity extends DrawerCreator implements AdapterView.OnItemSelectedListener {
 
     private Spinner spinnerProp;
     private static final String[] listaDoSpinner = {"Todas", "Em andamento", "Finalizadas"};
 
-    private DrawerLayout drawerLayout;
-    private ActionBarDrawerToggle actionBarDrawerToggle;
-    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (savedInstanceState == null)
+            savedInstanceState = new Bundle();
+        savedInstanceState.putInt("layout", R.layout.activity_propostas);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_propostas);
-
-        drawerLayout = (DrawerLayout) findViewById(R.id.activity_propostas);
-        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.abrir, R.string.fechar);
-
-        drawerLayout.addDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.syncState();
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        navigationView = (NavigationView) findViewById(R.id.navigationPropostas);
-        navigationView.setNavigationItemSelectedListener(this);
 
         /**Linha 41 à linha 24 insere um menu drop-down (Spinner) na activity*/
         spinnerProp = (Spinner) findViewById(R.id.listaDropDown_StatusDaProposta);
@@ -46,25 +34,14 @@ public class PropostasActivity extends AppCompatActivity implements AdapterView.
         spinnerProp.setOnItemSelectedListener(this);
     }
 
+
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+        
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        return false;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (actionBarDrawerToggle.onOptionsItemSelected(item))
-            return true;
-        return super.onOptionsItemSelected(item);
     }
 }
