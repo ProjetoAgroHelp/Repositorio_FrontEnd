@@ -9,7 +9,7 @@ public class FeedActivity extends DrawerCreator {
     protected void onCreate(Bundle savedInstanceState) {
         if (savedInstanceState == null)
             savedInstanceState = new Bundle();
-        savedInstanceState.putInt("layout", R.layout.activity_feed);
+        savedInstanceState.putInt("layout", R.layout.telamiolo);
         super.onCreate(savedInstanceState);
     }
 }

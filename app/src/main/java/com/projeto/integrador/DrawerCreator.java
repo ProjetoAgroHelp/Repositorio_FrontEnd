@@ -7,6 +7,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -57,11 +58,15 @@ public class DrawerCreator extends AppCompatActivity implements NavigationView.O
      **/
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+        Log.i("Drawer","passei aqui");
+
         int id = menuItem.getItemId();
         Intent intent;
         switch (id) {
 
             case R.id.propostas:
+                Log.i("Drawer","passei aqui");
                 intent = new Intent(this, PropostasActivity.class);
                 startActivity(intent);
                 break;
