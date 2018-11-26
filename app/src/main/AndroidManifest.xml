@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.projeto.integrador">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,11 +21,9 @@
         </activity>
         <activity android:name=".CadastroActivity" />
         <activity android:name=".Anuncio" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".PropostasActivity"></activity>
-        <activity android:name=".DrawerCreator">
-
-        </activity>
+        <activity android:name=".PropostasActivity" />
+        <activity android:name=".DrawerCreator" />
+        <activity android:name=".FeedActivity"></activity>
     </application>
 
 </manifest>

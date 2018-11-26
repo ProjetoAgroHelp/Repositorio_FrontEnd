@@ -7,21 +7,20 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
 public class DrawerCreator extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private DrawerLayout drawerLayoutMain;
-    private ActionBarDrawerToggle actionBarDrawerToggleMain;
-    private NavigationView navigationViewMain;
+    private DrawerLayout drawerLayout;
+    private ActionBarDrawerToggle actionBarDrawerToggle;
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_feed);
 
         LinearLayout layout = (LinearLayout) findViewById(R.id.inclusao);
         int layoutid = savedInstanceState.getInt("layout");
@@ -29,17 +28,17 @@ public class DrawerCreator extends AppCompatActivity implements NavigationView.O
         layout.addView(view);
 
         /**Linha 27 à linha 37 -> Implementação de Drawer_menu**/
-        drawerLayoutMain = (DrawerLayout) findViewById(R.id.activity_main);
+        drawerLayout = (DrawerLayout) findViewById(R.id.activity_feed);
 
-        actionBarDrawerToggleMain = new ActionBarDrawerToggle(this, drawerLayoutMain, R.string.abrir, R.string.fechar);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.abrir, R.string.fechar);
 
-        drawerLayoutMain.addDrawerListener(actionBarDrawerToggleMain);
-        actionBarDrawerToggleMain.syncState();
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        navigationViewMain = (NavigationView) findViewById(R.id.navigationMain);
-        navigationViewMain.setNavigationItemSelectedListener(this);
+        navigationView = (NavigationView) findViewById(R.id.navigationDrawer);
+        navigationView.setNavigationItemSelectedListener(this);
 
     }
 
@@ -48,7 +47,7 @@ public class DrawerCreator extends AppCompatActivity implements NavigationView.O
      **/
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (actionBarDrawerToggleMain.onOptionsItemSelected(item))
+        if (actionBarDrawerToggle.onOptionsItemSelected(item))
             return true;
         return super.onOptionsItemSelected(item);
     }
