@@ -21,7 +21,7 @@
 
         </activity>
         <activity android:name=".Anuncio"></activity>
-        <activity android:name=".CadastroActivity"></activity>
+        <activity android:name=".CadastroAcitivity"></activity>
         <activity android:name=".PropostasActivity" />
         <activity android:name=".DrawerCreator" />
         <activity android:name=".FeedActivity">

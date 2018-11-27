@@ -3,7 +3,7 @@ package com.projeto.integrador;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class CadastroActivity extends DrawerCreator {
+public class CadastroAcitivity extends DrawerCreator {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

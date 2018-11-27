@@ -71,7 +71,7 @@ public class DrawerCreator extends AppCompatActivity implements NavigationView.O
                 startActivity(intent);
                 break;
             case R.id.user:
-                intent = new Intent(this, CadastroActivity.class);
+                intent = new Intent(this, CadastroAcitivity.class);
                 startActivity(intent);
                 break;
         }
