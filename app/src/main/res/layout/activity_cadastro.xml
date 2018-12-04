@@ -33,57 +33,56 @@
         android:background="?android:attr/actionModePasteDrawable" />
 
 
-
     <EditText
-        android:id="@+id/Nome"
+        android:id="@+id/cadastroNome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
         android:layout_margin="10dp"
+        android:background="@android:color/white"
         android:hint="Nome" />
 
 
     <EditText
-        android:id="@+id/CPF"
+        android:id="@+id/cadastroCPF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
         android:layout_margin="10dp"
+        android:background="@android:color/white"
         android:hint="CPF" />
 
 
     <EditText
-        android:id="@+id/Email"
+        android:id="@+id/cadastroEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
         android:layout_margin="10dp"
+        android:background="@android:color/white"
 
         android:hint="Email" />
 
 
     <EditText
-        android:id="@+id/Perfil_Usuario"
+        android:id="@+id/cadastroPerfil_Usuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
         android:layout_margin="10dp"
+        android:background="@android:color/white"
         android:hint="Perfil Usuário" />
 
     <EditText
-        android:id="@+id/Login"
+        android:id="@+id/cadastroLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
         android:layout_margin="10dp"
+        android:background="@android:color/white"
         android:hint="Login" />
 
     <EditText
-        android:id="@+id/Senha"
+        android:id="@+id/cadastroSenha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
         android:layout_margin="10dp"
+        android:background="@android:color/white"
         android:hint="Password" />
 
     <Button
@@ -92,6 +91,7 @@
         android:layout_height="wrap_content"
         android:background="@android:color/holo_green_light"
         android:textSize="18dp"
+        android:onClick="cadastrarUsuario"
         android:layout_margin="10dp"
         android:text="Enviar" />
 

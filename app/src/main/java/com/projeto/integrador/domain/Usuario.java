@@ -5,12 +5,22 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class Usuario implements Serializable {
 
+
     private String nome;
     private String senha;
     private String cpf;
     private String email;
     private String login;
-    // private Fazendas fazendas; Fazenda acho que não traz por aqui.
+    //private List<Fazendas> fazendas; //Fazenda acho que não traz por aqui.
+
+    public Usuario(String nome, String senha, String cpf, String email, String login) {
+        super();
+        this.nome = nome;
+        this.senha = senha;
+        this.cpf = cpf;
+        this.email = email;
+        this.login = login;
+    }
 
     public String getNome() {
         return nome;
