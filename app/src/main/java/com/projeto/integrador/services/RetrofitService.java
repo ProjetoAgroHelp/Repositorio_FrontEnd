@@ -11,10 +11,12 @@ public class RetrofitService {
 
      private String baseUrl = "http://projetointegrador2.cfapps.io/";  //10.0.2.2 ou http://127.0.0.1 - para local host
     //private String baseUrl = "https://jsonplaceholder.typicode.com/";
-    private InterfaceDeServicos api;
     private static RetrofitService instancia;
+    private InterfaceDeServicos api;
+
 
     private RetrofitService() {
+
         api = criaRetrofit().create(InterfaceDeServicos.class);
     }
 

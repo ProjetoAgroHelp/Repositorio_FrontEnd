@@ -1,17 +1,12 @@
 package com.projeto.integrador;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.projeto.integrador.domain.Usuario;
-import com.projeto.integrador.services.InterfaceDeServicos;
 import com.projeto.integrador.services.RetrofitService;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -19,7 +14,6 @@ import retrofit2.Response;
 
 public class CadastroAcitivity extends DrawerCreator {
 
-    private InterfaceDeServicos interfaceDeServicos;
     private RetrofitService retrofitService;
 
     @Override
@@ -44,20 +38,17 @@ public class CadastroAcitivity extends DrawerCreator {
 
         Usuario usuario = new Usuario(nome, senha,cpf, email, login);
 
-        Call<Usuario> call = interfaceDeServicos.cadastrarUsuario(usuario);
-
+        Call<Usuario> call = retrofitService.getServico().cadastrarUsuario(usuario);
         call.enqueue(new Callback<Usuario>() {
             @Override
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-               if(response.isSuccessful()){
-                   int temp = response.code();
-                   Log.i("tagCerta", "cadastrou!");
-               }
+                int statusCode = response.code();
+                Toast.makeText(CadastroAcitivity.this, statusCode, Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFailure(Call<Usuario> call, Throwable t) {
-                Log.i("tagCadastro", "falhou tela de cadastro!" + t.getMessage());
+                Toast.makeText(CadastroAcitivity.this, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
