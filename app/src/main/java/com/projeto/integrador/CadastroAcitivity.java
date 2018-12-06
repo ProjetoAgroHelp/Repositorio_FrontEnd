@@ -1,6 +1,7 @@
 package com.projeto.integrador;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -38,12 +39,11 @@ public class CadastroAcitivity extends DrawerCreator {
 
         Usuario usuario = new Usuario(nome, senha,cpf, email, login);
 
-        Call<Usuario> call = retrofitService.getServico().cadastrarUsuario(usuario);
+        Call call = retrofitService.getServico().cadastrarUsuario(usuario);
         call.enqueue(new Callback<Usuario>() {
             @Override
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                int statusCode = response.code();
-                Toast.makeText(CadastroAcitivity.this, statusCode, Toast.LENGTH_SHORT).show();
+                Log.i("teste","Entrou Post!");
             }
 
             @Override
