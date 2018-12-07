@@ -14,14 +14,22 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class PropostaActivity extends AppCompatActivity {
+public class PropostaActivity extends DrawerCreator {
     private RetrofitService retrofitService;
 
-    @Override
+        @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (savedInstanceState == null)
+            savedInstanceState = new Bundle();
+        savedInstanceState.putInt("layout", R.layout.activity_proposta);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_proposta);
     }
+
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_proposta);
+//    }
 
     public void cadastrarProposta(View view){
         EditText campoDescricao = findViewById(R.id.descri);
