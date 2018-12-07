@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PropostaActivity">
+
+    <View
+        android:id="@+id/fundoProposta"
+        android:layout_width="338dp"
+        android:layout_height="453dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="?attr/colorButtonNormal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#4caf50 "
+        android:text="CRIAR PROPOSTA"
+        android:onClick="cadastrarProposta"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/fundoProposta"
+        app:layout_constraintEnd_toEndOf="@+id/fundoProposta"
+        app:layout_constraintStart_toStartOf="@+id/fundoProposta" />
+
+    <EditText
+        android:id="@+id/descri"
+        android:layout_width="308dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/white"
+        android:onClick="cadastrarProposta"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="descricao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fundoProposta" />
+
+    <EditText
+        android:id="@+id/prazo"
+        android:layout_width="308dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="prazo"
+        app:layout_constraintEnd_toEndOf="@+id/fundoProposta"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/fundoProposta"
+        app:layout_constraintTop_toBottomOf="@+id/descri" />
+
+    <TextView
+        android:id="@+id/tv_response"
+        android:layout_marginTop="35dp"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</android.support.constraint.ConstraintLayout>
