@@ -1,5 +1,6 @@
 package com.projeto.integrador;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +17,7 @@ import retrofit2.Response;
 
 public class PropostaActivity extends DrawerCreator {
     private RetrofitService retrofitService;
+    private String mensagem;
 
         @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +47,16 @@ public class PropostaActivity extends DrawerCreator {
             @Override
             public void onResponse(Call<Proposta> call, Response<Proposta> response) {
                 Log.i("teste","Entrou Post!");
+                Toast.makeText(getApplicationContext(), "proposta criada com sucesso", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(PropostaActivity.this, FeedActivity.class);
+                intent.putExtra("mensagem", mensagem);
+                startActivity(intent);
+
             }
 
             @Override
             public void onFailure(Call<Proposta> call, Throwable t) {
-                Toast.makeText(PropostaActivity.this, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(PropostaActivity.this, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
