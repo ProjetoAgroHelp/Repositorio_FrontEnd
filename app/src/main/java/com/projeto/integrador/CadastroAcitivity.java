@@ -2,6 +2,7 @@ package com.projeto.integrador;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -14,15 +15,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class CadastroAcitivity extends DrawerCreator {
+public class CadastroAcitivity extends AppCompatActivity {
 
     private RetrofitService retrofitService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if (savedInstanceState == null)
-            savedInstanceState = new Bundle();
-        savedInstanceState.putInt("layout", R.layout.tela_cadastro);
+        setContentView(R.layout.tela_cadastro);
         super.onCreate(savedInstanceState);
     }
 
