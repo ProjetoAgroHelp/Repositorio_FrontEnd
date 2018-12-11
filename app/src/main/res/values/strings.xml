@@ -3,4 +3,15 @@
     <string name="foto_do_usuario">foto do usuario</string>
     <string name="abrir">Abrir</string>
     <string name="fechar">Fechar</string>
+
+    <!-- do roberto - tela cadastro -->
+
+    <string name="dados_cadastrais">Dados Cadastrais</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="perfil_usu_rio">Perfil Usuário</string>
+    <string name="login">Login</string>
+    <string name="enviar">Enviar</string>
+    <string name="todo">TODO</string>
+    
 </resources>

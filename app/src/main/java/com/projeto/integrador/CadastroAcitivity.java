@@ -1,5 +1,6 @@
 package com.projeto.integrador;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -21,7 +22,7 @@ public class CadastroAcitivity extends DrawerCreator {
     protected void onCreate(Bundle savedInstanceState) {
         if (savedInstanceState == null)
             savedInstanceState = new Bundle();
-        savedInstanceState.putInt("layout", R.layout.activity_cadastro);
+        savedInstanceState.putInt("layout", R.layout.tela_cadastro);
         super.onCreate(savedInstanceState);
     }
 
@@ -44,6 +45,8 @@ public class CadastroAcitivity extends DrawerCreator {
             @Override
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                 Log.i("teste","Entrou Post!");
+                Intent i = new Intent(CadastroAcitivity.this, MainActivity.class);
+                startActivity(i);
             }
 
             @Override
