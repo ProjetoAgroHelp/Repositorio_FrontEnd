@@ -112,4 +112,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    public void mainCadastrar(View view) {
+        Intent i = new Intent(MainActivity.this, CadastroAcitivity.class);
+        startActivity(i);
+    }
 }

@@ -13,5 +13,6 @@
     <string name="login">Login</string>
     <string name="enviar">Enviar</string>
     <string name="todo">TODO</string>
-    
+    <string name="cadastre_se">CADASTRE-SE</string>
+
 </resources>

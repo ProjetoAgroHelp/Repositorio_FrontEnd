@@ -55,4 +55,9 @@ public class CadastroAcitivity extends DrawerCreator {
             }
         });
     }
+
+    public void retornarMain(View view) {
+        Intent i = new Intent(CadastroAcitivity.this, MainActivity.class);
+        startActivity(i);
+    }
 }
