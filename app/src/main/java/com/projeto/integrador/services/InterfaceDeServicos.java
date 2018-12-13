@@ -1,6 +1,7 @@
 package com.projeto.integrador.services;
 
 import com.projeto.integrador.domain.Fazendas;
+import com.projeto.integrador.domain.Proposta;
 import com.projeto.integrador.domain.Usuario;
 
 import java.util.List;
@@ -22,6 +23,9 @@ public interface InterfaceDeServicos {
 
     @POST("/usuarios")
     Call<Void> cadastrarUsuario(@Body Usuario usuario); // post sem retorno
+
+    @POST("/propostas")
+    Call<Void> cadastraProposta(@Body Proposta proposta); // post sem retorno
 
     @DELETE("/usuarios/{id}")
     Call<Usuario> apagarUsuario(@Path("id") int id);
