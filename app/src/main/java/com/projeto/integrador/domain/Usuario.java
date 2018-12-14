@@ -22,6 +22,11 @@ public class Usuario implements Serializable {
         this.login = login;
     }
 
+    public Usuario(String nome, String senha){
+        this.nome = nome;
+        this.senha = senha;
+    }
+
     public String getNome() {
         return nome;
     }

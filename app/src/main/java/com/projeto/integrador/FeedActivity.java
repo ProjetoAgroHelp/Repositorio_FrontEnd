@@ -1,7 +1,9 @@
 package com.projeto.integrador;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+
+import com.projeto.integrador.domain.Usuario;
 
 public class FeedActivity extends DrawerCreator {
 
