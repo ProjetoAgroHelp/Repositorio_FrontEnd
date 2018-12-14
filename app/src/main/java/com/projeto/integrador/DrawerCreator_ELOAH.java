@@ -14,9 +14,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.projeto.integrador.application.AgroHelpApplication;
-import com.projeto.integrador.domain.Usuario;
 
-public class DrawerCreator extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class DrawerCreator_ELOAH extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
@@ -26,7 +25,7 @@ public class DrawerCreator extends AppCompatActivity implements NavigationView.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feed);
+        setContentView(R.layout.activity_feed_ELOAH);
 
         LinearLayout layout = (LinearLayout) findViewById(R.id.inclusao);
         int layoutid = savedInstanceState.getInt("layout");
@@ -64,8 +63,8 @@ public class DrawerCreator extends AppCompatActivity implements NavigationView.O
                 Log.i("TesteObjeto", usr.getNome());*/
 
 
-        ((TextView)navigationView.getHeaderView(0).findViewById(R.id.nome_do_usuario)).setText(nomeUsuarioLogado);
-        ((TextView)navigationView.getHeaderView(0).findViewById(R.id.email_do_usuario)).setText(emailUsuarioLogado);
+                ((TextView)navigationView.getHeaderView(0).findViewById(R.id.nome_do_usuario)).setText(nomeUsuarioLogado);
+                ((TextView)navigationView.getHeaderView(0).findViewById(R.id.email_do_usuario)).setText(emailUsuarioLogado);
 
 
 /*            }
@@ -121,7 +120,7 @@ public class DrawerCreator extends AppCompatActivity implements NavigationView.O
         Intent intent;
         switch (id) {
             case R.id.home:
-                intent = new Intent(this, FeedActivity.class);
+                intent = new Intent(this, FeedActivity_ELOAH.class);
                 startActivity(intent);
                 break;
             case R.id.user:
@@ -129,7 +128,7 @@ public class DrawerCreator extends AppCompatActivity implements NavigationView.O
                 startActivity(intent);
                 break;
             case R.id.propostas:
-                intent = new Intent(this, PropostasActivity.class);
+                intent = new Intent(this, PropostasActivity_ELOAH.class);
                 startActivity(intent);
                 break;
             case R.id.orcamentos:
