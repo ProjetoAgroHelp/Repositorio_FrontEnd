@@ -21,9 +21,20 @@ public class CadastroAcitivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+<<<<<<< HEAD
+=======
         setContentView(R.layout.tela_cadastro);
+>>>>>>> 7991a416008dd7ebd9627381b72ea404ab62e6b7
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_cadastro);
     }
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        if (savedInstanceState == null)
+//            savedInstanceState = new Bundle();
+//        savedInstanceState.putInt("layout", R.layout.activity_cadastro);
+//        super.onCreate(savedInstanceState);
+//    }
 
     public void cadastrarUsuario(View view){
         EditText tempNome = findViewById(R.id.cadastroNome);

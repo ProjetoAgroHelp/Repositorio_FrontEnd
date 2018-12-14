@@ -26,12 +26,21 @@ public class MainActivity extends AppCompatActivity {
     private UsuarioAdapter usuarioAdapter;
     private List<Usuario> usuarios;
     private TextView login, senha;
+    private String mensagem;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+
+    public void irCadastro(View view){
+        Intent intent = new Intent(MainActivity.this, CadastroAcitivity.class);
+        intent.putExtra("mensagem", mensagem);
+        startActivity(intent);
+
     }
 
 
