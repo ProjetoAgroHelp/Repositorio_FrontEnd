@@ -1,5 +1,6 @@
 package com.projeto.integrador;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -20,6 +21,10 @@ public class CadastroAcitivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+<<<<<<< HEAD
+=======
+        setContentView(R.layout.tela_cadastro);
+>>>>>>> 7991a416008dd7ebd9627381b72ea404ab62e6b7
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
     }
@@ -50,6 +55,8 @@ public class CadastroAcitivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                 Log.i("teste","Entrou Post!");
+                Intent i = new Intent(CadastroAcitivity.this, MainActivity.class);
+                startActivity(i);
             }
 
             @Override
@@ -57,5 +64,10 @@ public class CadastroAcitivity extends AppCompatActivity {
                 Toast.makeText(CadastroAcitivity.this, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    public void retornarMain(View view) {
+        Intent i = new Intent(CadastroAcitivity.this, MainActivity.class);
+        startActivity(i);
     }
 }

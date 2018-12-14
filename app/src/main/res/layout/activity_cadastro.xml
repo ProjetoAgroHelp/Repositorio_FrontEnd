@@ -34,7 +34,7 @@
 
 
     <EditText
-        android:id="@+id/cadastroNome"
+        android:id="@+id/alterarCadastroNome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -43,7 +43,7 @@
 
 
     <EditText
-        android:id="@+id/cadastroCPF"
+        android:id="@+id/alterarCadastroCPF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -52,7 +52,7 @@
 
 
     <EditText
-        android:id="@+id/cadastroEmail"
+        android:id="@+id/alterarCadastroEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -62,15 +62,7 @@
 
 
     <EditText
-        android:id="@+id/cadastroPerfil_Usuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@android:color/white"
-        android:hint="Perfil Usuário" />
-
-    <EditText
-        android:id="@+id/cadastroLogin"
+        android:id="@+id/alterarCadastroLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -78,23 +70,32 @@
         android:hint="Login" />
 
     <EditText
-        android:id="@+id/cadastroSenha"
+        android:id="@+id/alterarCadastroSenha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@android:color/white"
+        android:inputType="textPassword"
         android:hint="Password" />
 
     <Button
         android:id="@+id/Enviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_green_light"
-        android:textSize="18dp"
-        android:onClick="cadastrarUsuario"
         android:layout_margin="10dp"
-        android:text="Enviar" />
-
+        android:background="@android:color/holo_green_light"
+        android:onClick="alterarDadosUsuario"
+        android:text="Enviar"
+        android:textSize="18dp" />
+    <Button
+        android:id="@+id/alterarInformacoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:color/holo_green_light"
+        android:onClick="submeterAlteracoes"
+        android:text="Enviar ao Servidor"
+        android:textSize="18dp" />
 
 
     <!-- Para colocar input no campo
