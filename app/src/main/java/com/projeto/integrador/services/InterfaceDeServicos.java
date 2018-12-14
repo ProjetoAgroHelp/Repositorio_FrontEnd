@@ -3,6 +3,7 @@ package com.projeto.integrador.services;
 import com.projeto.integrador.domain.Fazendas;
 import com.projeto.integrador.domain.Proposta;
 import com.projeto.integrador.domain.Usuario;
+import com.projeto.integrador.services.domain.UsuarioRequest;
 
 import java.util.List;
 
@@ -18,11 +19,17 @@ public interface InterfaceDeServicos {
     @GET("/usuarios")
     Call<List<Usuario>> obterDados();
 
+    @GET("/usuarios")
+    Call<Usuario> login(UsuarioRequest usuarioRequest);
+
     @POST("/usuarios")
     Call<Usuario> logar(String login, String senha);
 
     @GET("/fazendas")
     Call<List<Fazendas>> obterFazendas();
+
+    @GET("/propostas")
+    Call<List<Proposta>> obterPropostas();
 
     @POST("/usuarios")
     Call<Void> cadastrarUsuario(@Body Usuario usuario); // post sem retorno

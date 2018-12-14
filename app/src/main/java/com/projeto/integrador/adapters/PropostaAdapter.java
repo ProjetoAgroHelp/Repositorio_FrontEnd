@@ -50,9 +50,9 @@ public class PropostaAdapter extends BaseAdapter {
         TextView nomeFazenda = (TextView) linha.findViewById(R.id.nomeFazenda_postFeed);
         TextView prazoServico = (TextView) linha.findViewById(R.id.prazoServico_postFeed);
 
-        nomeUsuario.setText(proposta.getNomeDoUsuario());
+        //nomeUsuario.setText(proposta.getNomeDoUsuario());  --- precisamos ver isso aqui!
         descricaoServico.setText(proposta.getDescricao() + " descrição aqui");
-        nomeFazenda.setText(proposta.getFazenda());
+        //nomeFazenda.setText(proposta.getFazenda());        --- precisamos ver isso aqui!
         prazoServico.setText(proposta.getPrazo() + "");
 
         return linha;

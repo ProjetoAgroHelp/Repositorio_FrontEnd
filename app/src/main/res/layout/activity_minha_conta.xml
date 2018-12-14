@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fundotela_cadastro"
+    android:background="@drawable/fundoteladadoscadastrais"
     android:padding="10dp"
     tools:layout_editor_absoluteY="81dp">
 
@@ -17,6 +17,7 @@
         android:background="@android:color/holo_green_light"
         android:text="voltar"
         android:textSize="18sp"
+        android:onClick="voltarTelaPrincipal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

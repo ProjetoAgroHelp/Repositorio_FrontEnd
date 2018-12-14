@@ -1,6 +1,8 @@
 package com.projeto.integrador;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.projeto.integrador.application.AgroHelpApplication;
@@ -41,5 +43,10 @@ public class MinhaContaActivity extends DrawerCreator {
         textViewEmailUserLogado.setText(emailUsuarioLogado);
         textViewLoginUserLogado.setText(loginUsuarioLogado);
         textViewSenhaUserLogado.setText(senhaUsuarioLogado);
+    }
+
+    public void voltarTelaPrincipal(View view){
+        Intent intent = new Intent(this, FeedActivity.class);
+        startActivity(intent);
     }
 }

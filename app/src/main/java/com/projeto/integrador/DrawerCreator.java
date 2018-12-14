@@ -14,7 +14,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.projeto.integrador.application.AgroHelpApplication;
-import com.projeto.integrador.domain.Usuario;
 
 public class DrawerCreator extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -64,8 +63,8 @@ public class DrawerCreator extends AppCompatActivity implements NavigationView.O
                 Log.i("TesteObjeto", usr.getNome());*/
 
 
-        ((TextView)navigationView.getHeaderView(0).findViewById(R.id.nome_do_usuario)).setText(nomeUsuarioLogado);
-        ((TextView)navigationView.getHeaderView(0).findViewById(R.id.email_do_usuario)).setText(emailUsuarioLogado);
+                ((TextView)navigationView.getHeaderView(0).findViewById(R.id.nome_do_usuario)).setText(nomeUsuarioLogado);
+                ((TextView)navigationView.getHeaderView(0).findViewById(R.id.email_do_usuario)).setText(emailUsuarioLogado);
 
 
 /*            }

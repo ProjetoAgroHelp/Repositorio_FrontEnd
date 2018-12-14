@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>-->
+            <intent-filter>
+                -->
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -24,11 +25,14 @@
         <activity android:name=".Anuncio" />
         <activity android:name=".CadastroAcitivity" />
         <activity android:name=".PropostasActivity" />
+        <activity android:name=".CabecalhoGavetaActivity" />
+        <activity android:name=".MinhaContaActivity" />
+        <activity android:name=".OrcamentosActivity" />
         <activity android:name=".DrawerCreator" />
-        <activity android:name=".FeedActivity"></activity>
-        <activity android:name=".PropostaActivity">
-
-        </activity>
+        <activity android:name=".PremiumActivity" />
+        <activity android:name=".FeedActivity" />
+        <activity android:name=".PropostaActivity"></activity>
+        <activity android:name=".EscolhaActivity"></activity>
     </application>
 
 </manifest>
