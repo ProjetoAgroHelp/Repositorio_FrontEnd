@@ -21,12 +21,11 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
-    private InterfaceDeServicos interfaceDeServicos;
     private RetrofitService retrofitService;
     private UsuarioAdapter usuarioAdapter;
-    private List<Usuario> usuarios;
+    private Usuario usuario;
     private TextView login, senha;
 
 
@@ -38,19 +37,30 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void chamadaLogin() {
-        interfaceDeServicos = retrofitService.getServico();
+
 
         String loginTexto = login.getText().toString();
         String senhaTexto = senha.getText().toString();
 
-        Call<Usuario> call = interfaceDeServicos.login(new UsuarioRequest(loginTexto, senhaTexto));
+        Log.i("usuarioRequest", loginTexto);
+        Log.i("usuarioRequest", senhaTexto);
+
+        UsuarioRequest usuarioRequest = new UsuarioRequest(loginTexto, senhaTexto);
+
+        Call call = RetrofitService.getServico().login(usuarioRequest);
 
         call.enqueue(new Callback<Usuario>() {
             @Override
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+
+                usuario = response.body();
+
                 if (response.body() != null && response.isSuccessful())  {
                     AgroHelpApplication.getInstance().setUsuario(response.body());
                     startActivityFeed();
+                }
+                else{
+                    Toast.makeText(MainActivity.this, "Login ou Senha Inválidos", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -109,10 +119,10 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
 
-//            chamadaLogin();
+            chamadaLogin();
             //TODO ativar de novo quando back-end estiver pronto (Está mocado o login)
-            AgroHelpApplication.getInstance().setUsuario(new Usuario("Breno Mendes", "1234", "01010101001", "brenomendes@gmail.com", "Breno Mendes"));
-            startActivityFeed();
+            //AgroHelpApplication.getInstance().setUsuario(new Usuario("Breno Mendes", "1234", "01010101001", "brenomendes@gmail.com", "Breno Mendes"));
+            //startActivityFeed();
 
         }
 

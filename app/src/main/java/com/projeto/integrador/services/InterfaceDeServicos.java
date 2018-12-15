@@ -19,11 +19,8 @@ public interface InterfaceDeServicos {
     @GET("/usuarios")
     Call<List<Usuario>> obterDados();
 
-    @GET("/usuarios")
-    Call<Usuario> login(UsuarioRequest usuarioRequest);
-
-    @POST("/usuarios")
-    Call<Usuario> logar(String login, String senha);
+    @POST("/usuarios/login")
+    Call<Usuario> login(@Body UsuarioRequest usuarioRequest);
 
     @GET("/fazendas")
     Call<List<Fazendas>> obterFazendas();
