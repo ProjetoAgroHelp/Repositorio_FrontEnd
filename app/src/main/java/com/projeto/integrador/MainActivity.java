@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity{
 
             @Override
             public void onFailure(Call<Usuario> call, Throwable t) {
-                Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Login ou Senha Inválidos", Toast.LENGTH_SHORT).show();
             }
         });
 

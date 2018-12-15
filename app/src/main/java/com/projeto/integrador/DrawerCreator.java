@@ -139,6 +139,9 @@ public class DrawerCreator extends AppCompatActivity implements NavigationView.O
                 intent = new Intent(this, PremiumActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.logout:
+                intent = new Intent(this, Logout.class);
+                startActivity(intent);
         }
 
         return false;

@@ -31,8 +31,9 @@
         <activity android:name=".DrawerCreator" />
         <activity android:name=".PremiumActivity" />
         <activity android:name=".FeedActivity" />
-        <activity android:name=".PropostaActivity"></activity>
-        <activity android:name=".EscolhaActivity"></activity>
+        <activity android:name=".PropostaActivity" />
+        <activity android:name=".EscolhaActivity" />
+        <activity android:name=".Logout"></activity>
     </application>
 
 </manifest>
