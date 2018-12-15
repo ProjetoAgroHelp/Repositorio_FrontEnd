@@ -7,11 +7,13 @@ import com.projeto.integrador.services.domain.UsuarioRequest;
 
 import java.util.List;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface InterfaceDeServicos {
@@ -37,4 +39,6 @@ public interface InterfaceDeServicos {
     @DELETE("/usuarios/{id}")
     Call<Usuario> apagarUsuario(@Path("id") int id);
 
+    @PUT("/usuarios/{id}")
+    Call<Usuario> updateUsuario(@Path("id") Integer id, @Body Usuario usuario);
 }

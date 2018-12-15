@@ -70,6 +70,61 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
+
+
+    }
+
+    public void entraNoSistema(View view) {  // botão principal de login do sistema
+
+        login = findViewById(R.id.loginId);
+        senha = findViewById(R.id.senhaId);
+
+        Log.i("login", login.getText().toString());
+
+        if((login.getText().toString().isEmpty()) || senha.getText().toString().isEmpty()){
+            Toast.makeText(getApplicationContext(), "Você deve preencher os campos", Toast.LENGTH_SHORT).show();
+        }
+        else {
+
+            chamadaLogin();
+            //TODO ativar de novo quando back-end estiver pronto (Está mocado o login)
+            //AgroHelpApplication.getInstance().setUsuario(new Usuario("Breno Mendes", "1234", "01010101001", "brenomendes@gmail.com", "Breno Mendes"));
+            //startActivityFeed();
+
+        }
+
+    }
+
+    private void startActivityFeed() {
+        Intent intent = new Intent(MainActivity.this, FeedActivity.class);
+        startActivity(intent);
+    }
+
+    public void mainCadastrar(View view){
+        Intent intent = new Intent(MainActivity.this, CadastroAcitivity.class);
+        startActivity(intent);
+    }
+}
+
+
+// códigos usados para teste e estudo
+
+
+
+        /* criei este teste para simplismente buscar os dados digitados na tela e transcrever para o log.
+        login = findViewById(R.id.loginId);
+        senha = findViewById(R.id.senhaId);
+
+        if (login != null && senha != null){
+
+            String loginTexto = login.getText().toString();
+            String senhaTexto = senha.getText().toString();
+
+            Log.i("nome entrado no login", loginTexto);
+            Log.i("nome entrado na senha", senhaTexto);
+        }*/
+
+
 //        call.enqueue(new Callback<List<Usuario>>() {
 //            @Override
 //            public void onResponse(Call<List<Usuario>> call, Response<List<Usuario>> response) {
@@ -104,49 +159,3 @@ public class MainActivity extends AppCompatActivity{
 //                Log.i("erro", t.getMessage());
 //            }
 //        });
-
-    }
-
-    public void entraNoSistema(View view) {  // botão principal de login do sistema
-
-        login = findViewById(R.id.loginId);
-        senha = findViewById(R.id.senhaId);
-
-        Log.i("login", login.getText().toString());
-
-        if((login.getText().toString().isEmpty()) || senha.getText().toString().isEmpty()){
-            Toast.makeText(getApplicationContext(), "Você deve preencher os campos", Toast.LENGTH_SHORT).show();
-        }
-        else {
-
-            chamadaLogin();
-            //TODO ativar de novo quando back-end estiver pronto (Está mocado o login)
-            //AgroHelpApplication.getInstance().setUsuario(new Usuario("Breno Mendes", "1234", "01010101001", "brenomendes@gmail.com", "Breno Mendes"));
-            //startActivityFeed();
-
-        }
-
-        // criei este teste para simplismente buscar os dados digitados na tela e transcrever para o log.
-        login = findViewById(R.id.loginId);
-        senha = findViewById(R.id.senhaId);
-
-        if (login != null && senha != null){
-
-            String loginTexto = login.getText().toString();
-            String senhaTexto = senha.getText().toString();
-
-            Log.i("nome entrado no login", loginTexto);
-            Log.i("nome entrado na senha", senhaTexto);
-        }
-    }
-
-    private void startActivityFeed() {
-        Intent intent = new Intent(MainActivity.this, FeedActivity.class);
-        startActivity(intent);
-    }
-
-    public void mainCadastrar(View view){
-        Intent intent = new Intent(MainActivity.this, CadastroAcitivity.class);
-        startActivity(intent);
-    }
-}

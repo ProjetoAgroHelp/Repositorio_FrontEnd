@@ -36,8 +36,7 @@ public class FeedActivity extends DrawerCreator {
     }
 
     private void imprimePropostasGerais() {
-        InterfaceDeServicos services = RetrofitService.getServico();
-        Call<List<Proposta>> call = services.obterPropostas();
+        Call<List<Proposta>> call = RetrofitService.getServico().obterPropostas();
         Log.i("teste", "------------> 1");
         call.enqueue(new Callback<List<Proposta>>() {
             @Override
