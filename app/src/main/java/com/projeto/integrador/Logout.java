@@ -1,5 +1,6 @@
 package com.projeto.integrador;
 
+import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ public class Logout extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //AgroHelpApplication.getInstance().setUsuario(null);
+        Intent i = new Intent(Logout.this,MainActivity.class);
+        startActivity(i);
     }
 }

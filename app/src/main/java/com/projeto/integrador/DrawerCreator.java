@@ -46,6 +46,7 @@ public class DrawerCreator extends AppCompatActivity implements NavigationView.O
         navigationView.setNavigationItemSelectedListener(this);
 
         setCamposNoDrawer();
+
     }
 
     public void setCamposNoDrawer(){
