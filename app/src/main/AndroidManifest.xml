@@ -33,7 +33,9 @@
         <activity android:name=".FeedActivity" />
         <activity android:name=".PropostaActivity" />
         <activity android:name=".EscolhaActivity" />
-        <activity android:name=".Logout"></activity>
+        <activity android:name=".Logout" />
+        <activity android:name=".MainActivityRoberto" />
+        <activity android:name=".ExampleActivity"></activity>
     </application>
 
 </manifest>
