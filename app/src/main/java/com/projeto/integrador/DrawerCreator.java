@@ -45,8 +45,9 @@ public class DrawerCreator extends AppCompatActivity implements NavigationView.O
         navigationView = (NavigationView) findViewById(R.id.navigationDrawer);
         navigationView.setNavigationItemSelectedListener(this);
 
-        setCamposNoDrawer();
-
+        if(AgroHelpApplication.getInstance().getUsuario() != null) {
+            setCamposNoDrawer();
+        }
     }
 
     public void setCamposNoDrawer(){

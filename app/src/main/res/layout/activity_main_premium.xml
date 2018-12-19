@@ -24,12 +24,12 @@
         android:id="@+id/textoversaopremium"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="sans-serif"
-        android:text="ADQUIRA A VERSÃO PREMIUM"
+        android:text="@string/adquira_a_vers_o_premium"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@android:color/background_light"
         android:textSize="24dp"
         android:textStyle="bold"
         android:typeface="normal"
@@ -53,12 +53,12 @@
         android:id="@+id/percentual"
         android:layout_width="160dp"
         android:layout_height="24dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:background="@color/colorPrimaryDark"
-        android:text="Participação Orçamento"
+        android:text="@string/participa_o_or_amento"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
+        android:textColor="@android:color/holo_green_light"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView9" />
@@ -67,10 +67,10 @@
     <!--  primeira imagem do cifrão  -->
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="133dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="137dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/percentual"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.08"
@@ -81,45 +81,45 @@
     <!--  segunda imagem dinheiro na mão  -->
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="157dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="134dp"
+        android:layout_height="91dp"
+        android:layout_marginEnd="32dp"
         android:src="@drawable/lucro"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoversaopremium" />
+        app:layout_constraintTop_toTopOf="@+id/imageView9"
+        app:layout_constraintVertical_bias="0.0" />
 
     <!--  frase da segunda imagem   -->
     <TextView
         android:id="@+id/gereciamento"
         android:layout_width="150dp"
         android:layout_height="24dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:background="@color/colorPrimaryDark"
         android:text="Gerenciamento "
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
+        android:textColor="@android:color/holo_green_light"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/percentual"
         app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
     <!--  terceira imagem geolocalização  -->
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="142dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="116dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/geolocalizacao"
+        app:layout_constraintBottom_toTopOf="@+id/geolocalizacao"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/percentual" />
+        app:layout_constraintTop_toBottomOf="@+id/percentual"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
 
 
     <!--  frase da terceira imagem   -->
@@ -127,13 +127,12 @@
         android:id="@+id/geolocalizacao"
         android:layout_width="160dp"
         android:layout_height="24dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="32dp"
         android:layout_marginEnd="8dp"
         android:background="@color/colorPrimaryDark"
         android:text="Geolocalização  "
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
+        android:textColor="@android:color/holo_green_light"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -144,33 +143,31 @@
     <TextView
         android:id="@+id/geolocalizacao2"
         android:layout_width="150dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="36dp"
         android:background="@color/colorPrimaryDark"
         android:text="Suporte Online"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
+        android:textColor="@android:color/holo_green_light"
         android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/geolocalizacao"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+        app:layout_constraintTop_toTopOf="@+id/geolocalizacao"
+        app:layout_constraintVertical_bias="0.0" />
 
 
     <!--  quarta imagem suporte 24 horas   -->
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="145dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="165dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
         android:src="@drawable/tecnologia"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView12"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.81"
-        app:layout_constraintStart_toEndOf="@+id/imageView12"
-        app:layout_constraintTop_toTopOf="@+id/gereciamento" />
+        app:layout_constraintTop_toTopOf="@+id/imageView12"
+        app:layout_constraintVertical_bias="0.0" />
 
 
     <!--  botao comprar   -->
@@ -182,15 +179,16 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_blue_light"
+        android:background="@android:color/holo_green_light"
         android:shadowRadius="20"
+        android:onClick="comprarPremium"
         android:text="Comprar Versão Premium"
-        android:textColor="@android:color/holo_green_dark"
+        android:textColor="@android:color/holo_red_light"
         android:textColorLink="@android:color/holo_blue_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/geolocalizacao" />
+        app:layout_constraintTop_toBottomOf="@+id/geolocalizacao2" />
 
 </android.support.constraint.ConstraintLayout>
