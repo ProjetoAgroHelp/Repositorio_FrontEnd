@@ -16,4 +16,7 @@
     <string name="cadastre_se">CADASTRE-SE</string>
     <string name="voltar">Voltar</string>
 
+    <string name="button_buy">Comprar</string>
+    <string name="button_buying">"Processando pagamento..."</string>
+
 </resources>
