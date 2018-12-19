@@ -7,9 +7,14 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
-        <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
+
     </style>
+    <!-- comentando pra ver se o erro some
+
+    <item name="windowNoTitle">true</item>
+    <item name="windowActionBar">false</item>
+
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar"> coloquei isso só para lembrar
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
@@ -20,5 +25,7 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
+
+    -->
 
 </resources>

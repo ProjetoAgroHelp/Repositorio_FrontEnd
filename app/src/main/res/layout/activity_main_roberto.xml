@@ -13,6 +13,7 @@
     android:background="#fff"
     tools:context="com.projeto.integrador.MainActivityRoberto">
 
+    <!-- isso tá a causar conflito no Style
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,5 +31,7 @@
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_main_roberto" />
+
+    -->
 
 </android.support.design.widget.CoordinatorLayout>
