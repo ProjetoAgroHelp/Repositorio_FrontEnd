@@ -29,7 +29,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivityRoberto extends AppCompatActivity {
     // tem um static dando erro aqui!
 
-    /* Tire o comentário para ver os erros!
+    /* Tire o comentário para ver os erros!*/
 
     private Product product;
 
@@ -84,7 +84,7 @@ public class MainActivityRoberto extends AppCompatActivity {
                         View root = v.getRootView();
                         // dados do cartao
                         buttonBuying( true );
-                        CreditCard creditCard = new CreditCard( MainActivityRoberto.this );
+                        CreditCard creditCard = new CreditCard((Observer) MainActivityRoberto.this);
                         creditCard.setCardNumber( getViewContent( root, R.id.card_number ) );
                         creditCard.setName( getViewContent( root, R.id.name ) );
                         creditCard.setMonth( getViewContent( root, R.id.month ) );
@@ -173,5 +173,5 @@ public class MainActivityRoberto extends AppCompatActivity {
             }
         });
     }
-    */
+
 }

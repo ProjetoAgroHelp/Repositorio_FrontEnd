@@ -30,7 +30,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginRight="16dp"
             android:scaleType="centerCrop"
-            android:src="@mipmap/tennis" />
+            android:src="@mipmap/pagamento" />
 
         <TextView
             android:id="@+id/name"
@@ -70,19 +70,24 @@
             android:textColor="#212121"
             android:textSize="16sp" />
 
-        <br.com.uol.pslibs.checkout_in_app.wallet.view.components.PaymentButton
-            android:id="@+id/wallet_payment_button"
+        <Button
+            android:id="@+id/button_buy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp">
-        </br.com.uol.pslibs.checkout_in_app.wallet.view.components.PaymentButton>
+            android:layout_alignParentBottom="true"
+            android:background="#1d861d"
+            android:gravity="center"
+            android:onClick="buy"
+            android:padding="10dp"
+            android:text="Efetuar o Pagamento"
+            android:textColor="#fff" />
 
         <WebView
             android:id="@+id/web_view"
             android:layout_width="0.1dp"
             android:layout_height="0.1dp"
-            android:layout_below="@+id/button_buy"></WebView>
+            android:layout_below="@+id/button_buy">
+
+        </WebView>
     </RelativeLayout>
 </ScrollView>

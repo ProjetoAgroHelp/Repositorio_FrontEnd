@@ -29,6 +29,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main_roberto"/>
+    <include layout="@layout/content_main_roberto" />
 
 </android.support.design.widget.CoordinatorLayout>
