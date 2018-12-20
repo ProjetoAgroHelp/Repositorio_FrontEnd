@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-/*package com.projeto.integrador;
-=======
 package com.projeto.integrador;
->>>>>>> RobertoAndre
-
+/*
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -22,11 +18,7 @@ import com.projeto.integrador.domain.Product;
 
 import java.util.Observable;
 import java.util.Observer;
-
-<<<<<<< HEAD
-=======
 import cn.carbs.android.library.MDDialog;
->>>>>>> RobertoAndre
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -36,11 +28,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivityRoberto extends AppCompatActivity {
     // tem um static dando erro aqui!
 
-<<<<<<< HEAD
+
     /* Tire o comentário para ver os erros!
-=======
-    /* Tire o comentário para ver os erros!*/
->>>>>>> RobertoAndre
+
 
     private Product product;
 
@@ -186,7 +176,6 @@ public class MainActivityRoberto extends AppCompatActivity {
     }
 
 }
-<<<<<<< HEAD
+
 */
-=======
->>>>>>> RobertoAndre
+
