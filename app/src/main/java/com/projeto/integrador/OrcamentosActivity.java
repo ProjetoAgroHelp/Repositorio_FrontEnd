@@ -6,7 +6,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-public class OrcamentosActivity extends DrawerCreator implements AdapterView.OnItemSelectedListener {
+public class OrcamentosActivity extends DrawerCreator {
 
     private Spinner spinnerOrcamentos;
     private static final String[] listaDoSpinnerOrcamentos = {"Todos", "Enviados", "Recebidos"};
@@ -18,7 +18,7 @@ public class OrcamentosActivity extends DrawerCreator implements AdapterView.OnI
         savedInstanceState.putInt("layout", R.layout.activity_orcamentos);
         super.onCreate(savedInstanceState);
 
-        spinnerOrcamentos = (Spinner) findViewById(R.id.listaDropDown_TipoDoOrcamento);
+        /*spinnerOrcamentos = (Spinner) findViewById(R.id.listaDropDown_TipoDoOrcamento);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(OrcamentosActivity.this, android.R.layout.simple_spinner_dropdown_item, listaDoSpinnerOrcamentos);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -35,5 +35,6 @@ public class OrcamentosActivity extends DrawerCreator implements AdapterView.OnI
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }*/
     }
 }
