@@ -23,7 +23,6 @@ public class CadastroAcitivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.tela_cadastro);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tela_cadastro);
     }
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {

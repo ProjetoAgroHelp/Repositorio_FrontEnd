@@ -6,8 +6,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-public class PropostasActivity extends DrawerCreator {
-    //implements AdapterView.OnItemSelectedListener
+public class PropostasActivity extends DrawerCreator implements AdapterView.OnItemSelectedListener {
+
 
     private Spinner spinnerProp;
     private static final String[] listaDoSpinnerPropostas = {"Todas", "Em andamento", "Finalizadas"};
@@ -20,15 +20,15 @@ public class PropostasActivity extends DrawerCreator {
         savedInstanceState.putInt("layout", R.layout.activity_propostas);
         super.onCreate(savedInstanceState);
 
-        /*spinnerProp = (Spinner) findViewById(R.id.listaDropDown_StatusDaProposta);
+        spinnerProp = (Spinner) findViewById(R.id.listaDropDown_StatusDaProposta);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(PropostasActivity.this, android.R.layout.simple_spinner_dropdown_item, listaDoSpinnerPropostas);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerProp.setAdapter(adapter);
-        spinnerProp.setOnItemSelectedListener(this);*/
+        spinnerProp.setOnItemSelectedListener(this);
     }
 
-/*
+
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
@@ -37,5 +37,5 @@ public class PropostasActivity extends DrawerCreator {
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
-    }*/
+    }
 }

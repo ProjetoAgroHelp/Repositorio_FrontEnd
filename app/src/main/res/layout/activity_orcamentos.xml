@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".OrcamentosActivity"
     tools:layout_editor_absoluteY="81dp">
-    <!--
+
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
@@ -32,20 +32,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-    <ListView
-        android:id="@+id/listView_Orcamentos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="374dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listaDropDown_TipoDoOrcamento" />
-    -->
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/emconstrucao"/>
+        app:layout_constraintTop_toBottomOf="@+id/listaDropDown_TipoDoOrcamento"
+        app:srcCompat="@drawable/emconstrucao" />
+    <!--
+        <ListView
+            android:id="@+id/listView_Orcamentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listaDropDown_TipoDoOrcamento" />
+        -->
 
 </android.support.constraint.ConstraintLayout>
