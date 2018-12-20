@@ -14,22 +14,18 @@
         android:id="@+id/imageView3"
         android:layout_width="384dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:src="@drawable/agrohelpremium"
         app:layout_constraintBottom_toTopOf="@+id/textoversaopremium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!--  frase do logotipo premium  -->
     <TextView
         android:id="@+id/textoversaopremium"
         android:layout_width="384dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="sans-serif"
         android:text="ADQUIRA A VERSÃO PREMIUM"
@@ -38,9 +34,6 @@
         android:textSize="24dp"
         android:textStyle="bold"
         android:typeface="normal"
-        app:layout_constraintBottom_toTopOf="@+id/imageView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <ImageView
@@ -54,13 +47,12 @@
         android:id="@+id/percentual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="8dp"
         android:background="@color/colorPrimaryDark"
         android:text="Participação"
         android:textAlignment="center"
         android:textColor="@android:color/holo_green_light"
         android:textSize="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView12"
         app:layout_constraintEnd_toEndOf="@+id/imageView9"
         app:layout_constraintStart_toStartOf="@+id/imageView9"
         app:layout_constraintTop_toBottomOf="@+id/imageView9" />
@@ -71,13 +63,9 @@
         android:id="@+id/imageView9"
         android:layout_width="160dp"
         android:layout_height="70dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
         android:src="@drawable/percentual"
-        app:layout_constraintBottom_toTopOf="@+id/percentual"
-        app:layout_constraintEnd_toStartOf="@+id/imageView10"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textoversaopremium" />
 
@@ -88,10 +76,8 @@
         android:layout_width="160dp"
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="24dp"
         android:src="@drawable/lucro"
-        app:layout_constraintBottom_toTopOf="@+id/gereciamento"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
         app:layout_constraintStart_toEndOf="@+id/imageView9"
         app:layout_constraintTop_toTopOf="@+id/imageView9" />
     <!--  frase da segunda imagem   -->
@@ -99,28 +85,25 @@
         android:id="@+id/gereciamento"
         android:layout_width="114dp"
         android:layout_height="18dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="8dp"
         android:background="@color/colorPrimaryDark"
         android:text="Gerenciamento "
         android:textAlignment="center"
         android:textColor="@android:color/holo_green_light"
         android:textSize="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView13"
         app:layout_constraintEnd_toEndOf="@+id/imageView10"
         app:layout_constraintStart_toStartOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
     <!--  terceira imagem geolocalização  -->
     <ImageView
         android:id="@+id/imageView12"
         android:layout_width="160dp"
         android:layout_height="70dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/geolocalizacao"
         app:layout_constraintEnd_toEndOf="@+id/imageView9"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView9"
         app:layout_constraintTop_toBottomOf="@+id/percentual" />
 
 
@@ -129,6 +112,7 @@
         android:id="@+id/geolocalizacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:background="@color/colorPrimaryDark"
         android:text="Geolocalização  "
         android:textAlignment="center"
@@ -143,24 +127,26 @@
         android:id="@+id/geolocalizacao2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/colorPrimaryDark"
         android:text="Suporte Online"
         android:textAlignment="center"
         android:textColor="@android:color/holo_green_light"
         android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/geolocalizacao"
         app:layout_constraintEnd_toEndOf="@+id/imageView13"
         app:layout_constraintStart_toStartOf="@+id/imageView13"
-        app:layout_constraintTop_toTopOf="@+id/geolocalizacao" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
     <!--  quarta imagem suporte 24 horas   -->
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="160dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="156dp"
+        android:layout_height="71dp"
         android:src="@drawable/tecnologia"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView12"
         app:layout_constraintEnd_toEndOf="@+id/imageView10"
-        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintStart_toStartOf="@+id/imageView10"
         app:layout_constraintTop_toTopOf="@+id/imageView12" />
 
 
@@ -169,10 +155,9 @@
         android:id="@+id/buttoncomprar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/btn_redondo"
         android:backgroundTint="@android:color/holo_orange_light"
         android:onClick="comprarVersaoPremium"
@@ -185,6 +170,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/geolocalizacao2" />
+        app:layout_constraintTop_toBottomOf="@+id/geolocalizacao" />
 
 </android.support.constraint.ConstraintLayout>
