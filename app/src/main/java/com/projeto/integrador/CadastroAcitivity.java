@@ -59,4 +59,6 @@ public class CadastroAcitivity extends AppCompatActivity {
         Intent i = new Intent(CadastroAcitivity.this, MainActivity.class);
         startActivity(i);
     }
+
+
 }
