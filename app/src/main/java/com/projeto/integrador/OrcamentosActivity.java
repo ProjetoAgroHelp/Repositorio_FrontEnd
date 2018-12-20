@@ -6,25 +6,24 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-public class PropostasActivity extends DrawerCreator implements AdapterView.OnItemSelectedListener {
+public class OrcamentosActivity extends DrawerCreator implements AdapterView.OnItemSelectedListener {
 
-    private Spinner spinnerProp;
-    private static final String[] listaDoSpinnerPropostas = {"Todas", "Em andamento", "Finalizadas"};
-
+    private Spinner spinnerOrcamentos;
+    private static final String[] listaDoSpinnerOrcamentos = {"Todos", "Enviados", "Recebidos"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         if (savedInstanceState == null)
             savedInstanceState = new Bundle();
-        savedInstanceState.putInt("layout", R.layout.activity_propostas);
+        savedInstanceState.putInt("layout", R.layout.activity_orcamentos);
         super.onCreate(savedInstanceState);
 
-        spinnerProp = (Spinner) findViewById(R.id.listaDropDown_StatusDaProposta);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(PropostasActivity.this, android.R.layout.simple_spinner_dropdown_item, listaDoSpinnerPropostas);
+        spinnerOrcamentos = (Spinner) findViewById(R.id.listaDropDown_TipoDoOrcamento);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(OrcamentosActivity.this, android.R.layout.simple_spinner_dropdown_item, listaDoSpinnerOrcamentos);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerProp.setAdapter(adapter);
-        spinnerProp.setOnItemSelectedListener(this);
+        spinnerOrcamentos.setAdapter(adapter);
+        spinnerOrcamentos.setOnItemSelectedListener(this);
     }
 
 

@@ -9,7 +9,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitService {
 
-     private String baseUrl = "http://projetointegrador2.cfapps.io/";  //10.0.2.2 ou http://127.0.0.1 - para local host
+    //private String baseUrl = "http://10.0.2.2:8080/";  //10.0.2.2 ou http://127.0.0.1 - para local host
+    private String baseUrl = "http://projetointegrador2.cfapps.io/";
     //private String baseUrl = "https://jsonplaceholder.typicode.com/";
     private static RetrofitService instancia;
     private InterfaceDeServicos api;

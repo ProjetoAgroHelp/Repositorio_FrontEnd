@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:headerLayout="@layout/cabecalho_gaveta"
+        app:headerLayout="@layout/activity_cabecalho_gaveta"
         app:menu="@menu/menu_navegacao_gaveta">
 
     </android.support.design.widget.NavigationView>

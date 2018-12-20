@@ -1,11 +1,12 @@
 package com.projeto.integrador.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 @SuppressWarnings("serial")
 public class Usuario implements Serializable {
 
-
+    private Integer id;
     private String nome;
     private String senha;
     private String cpf;
@@ -20,11 +21,6 @@ public class Usuario implements Serializable {
         this.cpf = cpf;
         this.email = email;
         this.login = login;
-    }
-
-    public Usuario(String nome, String senha){
-        this.nome = nome;
-        this.senha = senha;
     }
 
     public String getNome() {
@@ -67,11 +63,19 @@ public class Usuario implements Serializable {
         this.login = login;
     }
 
-    //public Fazendas getFazendas() {
-    //    return fazendas;
-    //}
+    public Integer getId() {
+        return id;
+    }
 
-    //public void setFazendas(Fazendas fazendas) {
-    //    this.fazendas = fazendas;
-    //}
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    /*public Fazendas getFazendas() {
+        return (Fazendas) fazendas;
+    }
+
+    public void setFazendas(Fazendas fazendas) {
+        this.fazendas = (List<Fazendas>) fazendas;
+    }*/
 }

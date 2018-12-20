@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".application.AgroHelpApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -24,11 +25,15 @@
         <activity android:name=".Anuncio" />
         <activity android:name=".CadastroAcitivity" />
         <activity android:name=".PropostasActivity" />
+        <activity android:name=".CabecalhoGavetaActivity" />
+        <activity android:name=".MinhaContaActivity" />
+        <activity android:name=".OrcamentosActivity" />
         <activity android:name=".DrawerCreator" />
-        <activity android:name=".FeedActivity"></activity>
-        <activity android:name=".PropostaActivity">
-
-        </activity>
+        <activity android:name=".PremiumActivity" />
+        <activity android:name=".FeedActivity" />
+        <activity android:name=".PropostaActivity" />
+        <activity android:name=".EscolhaActivity" />
+        <activity android:name=".Logout"></activity>
     </application>
 
 </manifest>

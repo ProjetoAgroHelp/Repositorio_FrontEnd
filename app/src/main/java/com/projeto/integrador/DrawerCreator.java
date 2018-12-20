@@ -11,12 +11,16 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.projeto.integrador.application.AgroHelpApplication;
 
 public class DrawerCreator extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private NavigationView navigationView;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,58 @@ public class DrawerCreator extends AppCompatActivity implements NavigationView.O
         navigationView = (NavigationView) findViewById(R.id.navigationDrawer);
         navigationView.setNavigationItemSelectedListener(this);
 
+        setCamposNoDrawer();
+
+    }
+
+    public void setCamposNoDrawer(){
+
+        String nomeUsuarioLogado = AgroHelpApplication.getInstance().getUsuario().getNome();
+        String emailUsuarioLogado = AgroHelpApplication.getInstance().getUsuario().getEmail();
+
+/*        Usuario usr = null;
+        Bundle bundle = getIntent().getExtras();
+
+        if (bundle != null) {
+            Object value = bundle.get("usuarioObj");
+            if (value != null && value instanceof Usuario) {
+                usr = (Usuario) value;
+                Log.i("TesteObjeto", usr.getNome());*/
+
+
+                ((TextView)navigationView.getHeaderView(0).findViewById(R.id.nome_do_usuario)).setText(nomeUsuarioLogado);
+                ((TextView)navigationView.getHeaderView(0).findViewById(R.id.email_do_usuario)).setText(emailUsuarioLogado);
+
+
+/*            }
+            else {
+                Log.i("MIOU", "Nulo ou outro tipo: " + value);
+            }
+        }
+        else {
+            Log.i("MIOU", "Bundle tava nulo");
+        }*/
+
+
+       /* if (bundle != null) {
+            for (String key : bundle.keySet()) {
+                Object value = bundle.get(key);
+                if (value == null) {
+                    Log.i("Valor:", "nulo" );
+                }
+                else if (value instanceof Usuario) {
+                    Usuario user = (Usuario) value;
+                    Log.i("Valor: ", key + "::" + user.getNome());
+                }
+                else {
+                    Log.i("Valor:", "Outro tipo = " + key + "::" + value.getClass().getName());
+                }
+            }
+            Log.i("Terminou", "ok");
+        }
+        else {
+            Log.i("Tava vazio", "vazio");
+        }*/
     }
 
     /**
@@ -64,16 +120,29 @@ public class DrawerCreator extends AppCompatActivity implements NavigationView.O
         int id = menuItem.getItemId();
         Intent intent;
         switch (id) {
-
-            case R.id.propostas:
-                Log.i("Drawer","passei aqui");
-                intent = new Intent(this, PropostasActivity.class);
+            case R.id.home:
+                intent = new Intent(this, FeedActivity.class);
                 startActivity(intent);
                 break;
             case R.id.user:
-                intent = new Intent(this, CadastroAcitivity.class);
+                intent = new Intent(this, MinhaContaActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.propostas:
+                intent = new Intent(this, PropostasActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.orcamentos:
+                intent = new Intent(this, OrcamentosActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.premium:
+                intent = new Intent(this, PremiumActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.logout:
+                intent = new Intent(this, Logout.class);
+                startActivity(intent);
         }
 
         return false;
