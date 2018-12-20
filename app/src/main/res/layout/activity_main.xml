@@ -93,11 +93,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-<<<<<<< HEAD
-        android:text="CADASTRE-SE"
-        android:onClick="irCadastro"
-        android:textColor="@android:color/white"
-=======
         android:background="@drawable/bordas2"
         android:fontFamily="serif"
         android:onClick="mainCadastrar"
@@ -106,7 +101,6 @@
         android:text="@string/cadastre_se"
         android:textColor="@color/design_default_color_primary"
         android:textSize="14sp"
->>>>>>> 7991a416008dd7ebd9627381b72ea404ab62e6b7
         app:layout_constraintEnd_toEndOf="@+id/entrarId"
         app:layout_constraintStart_toStartOf="@+id/entrarId"
         app:layout_constraintTop_toBottomOf="@+id/entrarId" />
