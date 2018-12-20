@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_tela_feed">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -13,6 +14,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/listView_listaDoFeed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,14 +23,18 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:text="Nova Proposta"
+            android:layout_weight="1"
             android:onClick="irParaEscolha"
+            android:text="Nova Proposta"
             android:textSize="13dp"
+            android:textColor="@color/White"
+            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/button2"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/btn_redondo"
+            android:backgroundTint="@android:color/holo_orange_light"/>
 
         <Button
             android:id="@+id/button2"
@@ -36,21 +42,24 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
+            android:onClick="vaiParaMinhasPropostas"
             android:text="Minhas Propostas"
             android:textSize="13dp"
-            android:onClick="vaiParaMinhasPropostas"
+            android:textColor="@color/White"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:layout_editor_absoluteY="0dp" />
+            tools:layout_editor_absoluteY="0dp"
+            android:background="@drawable/btn_redondo"
+            android:backgroundTint="@android:color/holo_orange_light"/>
     </LinearLayout>
 
-    <ListView
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/listView_listaDoFeed"
         android:layout_width="match_parent"
         android:layout_height="427dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"></ListView>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"></android.support.v7.widget.RecyclerView>
 
 </android.support.constraint.ConstraintLayout>
