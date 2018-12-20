@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity{
     private UsuarioAdapter usuarioAdapter;
     private Usuario usuario;
     private TextView login, senha;
+    private String mensagem;
 
 
     @Override
@@ -36,7 +37,21 @@ public class MainActivity extends AppCompatActivity{
     }
 
 
+
     private void chamadaLogin() {
+
+    public void irCadastro(View view){
+        Intent intent = new Intent(MainActivity.this, CadastroAcitivity.class);
+        intent.putExtra("mensagem", mensagem);
+        startActivity(intent);
+
+    }
+
+
+    private void chamada() {
+        interfaceDeServicos = retrofitService.getServico();
+        Call<List<Usuario>> call = interfaceDeServicos.obterDados();
+
 
 
         String loginTexto = login.getText().toString();
