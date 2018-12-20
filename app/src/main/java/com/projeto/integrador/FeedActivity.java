@@ -2,6 +2,9 @@ package com.projeto.integrador;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
@@ -21,7 +24,8 @@ import retrofit2.Response;
 public class FeedActivity extends DrawerCreator {
 
     TextView textView;
-    ListView listaPropostas;
+    RecyclerView listaPropostas;
+    CardView cardViewFeed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +34,13 @@ public class FeedActivity extends DrawerCreator {
         savedInstanceState.putInt("layout", R.layout.telamiolo);
         super.onCreate(savedInstanceState);
 
-        listaPropostas = (ListView) findViewById(R.id.listView_listaDoFeed);
+        cardViewFeed = (CardView) findViewById(R.id.cv);
+
+        listaPropostas = (RecyclerView) findViewById(R.id.listView_listaDoFeed);
+        listaPropostas.setLayoutManager(new LinearLayoutManager(this));
 
         imprimePropostasGerais();
+        //estilizandoCardView(cardViewFeed);
     }
 
     private void imprimePropostasGerais() {
@@ -44,7 +52,10 @@ public class FeedActivity extends DrawerCreator {
                 Log.i("teste", "------------> 2");
                 List<Proposta> listaDePropostasGerais = response.body();
                 Log.i("teste", "------------> 2.1: "+listaDePropostasGerais.size());
-                listaPropostas.setAdapter(new PropostaAdapter(FeedActivity.this, listaDePropostasGerais));
+             //  listaPropostas.setAdapter(new PropostaAdapter(FeedActivity.this, listaDePropostasGerais));
+
+                PropostaAdapter adapter = new PropostaAdapter(listaDePropostasGerais);
+                listaPropostas.setAdapter(adapter);
             }
 
             @Override
@@ -62,5 +73,9 @@ public class FeedActivity extends DrawerCreator {
     public void irParaEscolha(View view) {
         Intent intent = new Intent(this, EscolhaActivity.class);
         startActivity(intent);
+    }
+
+    public void estilizandoCardView(CardView cardView){
+        cardView.getRadius();
     }
 }
