@@ -45,11 +45,12 @@ public class DrawerCreator extends AppCompatActivity implements NavigationView.O
         navigationView = (NavigationView) findViewById(R.id.navigationDrawer);
         navigationView.setNavigationItemSelectedListener(this);
 
-        setCamposNoDrawer();
-
+        if(AgroHelpApplication.getInstance().getUsuario() != null) {
+            setCamposNoDrawer();
+        }
     }
 
-    public void setCamposNoDrawer(){
+    public void setCamposNoDrawer() {
 
         String nomeUsuarioLogado = AgroHelpApplication.getInstance().getUsuario().getNome();
         String emailUsuarioLogado = AgroHelpApplication.getInstance().getUsuario().getEmail();
@@ -64,8 +65,8 @@ public class DrawerCreator extends AppCompatActivity implements NavigationView.O
                 Log.i("TesteObjeto", usr.getNome());*/
 
 
-                ((TextView)navigationView.getHeaderView(0).findViewById(R.id.nome_do_usuario)).setText(nomeUsuarioLogado);
-                ((TextView)navigationView.getHeaderView(0).findViewById(R.id.email_do_usuario)).setText(emailUsuarioLogado);
+        ((TextView) navigationView.getHeaderView(0).findViewById(R.id.nome_do_usuario)).setText(nomeUsuarioLogado);
+        ((TextView) navigationView.getHeaderView(0).findViewById(R.id.email_do_usuario)).setText(emailUsuarioLogado);
 
 
 /*            }
@@ -115,7 +116,7 @@ public class DrawerCreator extends AppCompatActivity implements NavigationView.O
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
-        Log.i("Drawer","passei aqui");
+        Log.i("Drawer", "passei aqui");
 
         int id = menuItem.getItemId();
         Intent intent;
