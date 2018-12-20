@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="7" />
+                                                <entry key="scalingPercent" value="9" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -34,7 +34,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="66" />
+                                                <entry key="scalingPercent" value="65" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -44,10 +44,9 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="0d6203" />
-                                      <entry key="foregroundImage" value="C:\Users\rober\Desktop\AgroHelpPremiu2.jpg" />
+                                      <entry key="foregroundImage" value="C:\Users\rober\Desktop\logotipo.png" />
                                       <entry key="previewDensity" value="XXXHIGH" />
+                                      <entry key="showSafeZone" value="false" />
                                     </map>
                                   </option>
                                 </PersistentState>
