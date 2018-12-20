@@ -1,6 +1,7 @@
 package com.projeto.integrador.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings("serial")
@@ -12,6 +13,7 @@ public class Usuario implements Serializable {
     private String cpf;
     private String email;
     private String login;
+    private List<Proposta> propostas = new ArrayList<>();
     //private List<Fazendas> fazendas; //Fazenda acho que não traz por aqui.
 
     public Usuario(String nome, String senha, String cpf, String email, String login) {
@@ -69,6 +71,14 @@ public class Usuario implements Serializable {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public List<Proposta> getPropostas() {
+        return propostas;
+    }
+
+    public void setPropostas(List<Proposta> propostas) {
+        this.propostas = propostas;
     }
 
     /*public Fazendas getFazendas() {
