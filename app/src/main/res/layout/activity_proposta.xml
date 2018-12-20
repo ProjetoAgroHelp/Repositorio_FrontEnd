@@ -4,16 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PropostaActivity">
+    tools:context=".PropostaActivity"
+    android:background="@drawable/fundo_tela_feed">
 
     <View
         android:id="@+id/fundoProposta"
         android:layout_width="338dp"
         android:layout_height="453dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:background="?attr/colorButtonNormal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,11 +22,13 @@
         android:id="@+id/submit"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:background="#4caf50 "
-        android:text="CRIAR PROPOSTA"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/btn_redondo"
+        android:backgroundTint="@android:color/holo_orange_light"
         android:onClick="cadastrarProposta"
-        android:textColor="@android:color/white"
+        android:text="CRIAR PROPOSTA"
+        android:textColor="@color/White"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/fundoProposta"
         app:layout_constraintEnd_toEndOf="@+id/fundoProposta"
         app:layout_constraintStart_toStartOf="@+id/fundoProposta" />
@@ -37,14 +36,11 @@
     <EditText
         android:id="@+id/descri"
         android:layout_width="308dp"
-        android:layout_height="26dp"
+        android:layout_height="300px"
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
         android:background="@android:color/white"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="descricao"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/fundoProposta" />
@@ -57,7 +53,6 @@
         android:background="@android:color/white"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="prazo"
         app:layout_constraintEnd_toEndOf="@+id/fundoProposta"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="@+id/fundoProposta"
@@ -69,5 +64,25 @@
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Descrição:"
+        android:textColor="#000"
+        app:layout_constraintBottom_toTopOf="@+id/descri"
+        app:layout_constraintStart_toStartOf="@+id/descri" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Prazo (dd/mm/aaaa):"
+        android:textColor="#000"
+        app:layout_constraintBottom_toTopOf="@+id/prazo"
+        app:layout_constraintStart_toStartOf="@+id/prazo" />
 
 </android.support.constraint.ConstraintLayout>

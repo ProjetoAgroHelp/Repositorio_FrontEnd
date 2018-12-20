@@ -71,7 +71,7 @@ public class FeedActivity extends DrawerCreator {
     }
 
     public void irParaEscolha(View view) {
-        Intent intent = new Intent(this, EscolhaActivity.class);
+        Intent intent = new Intent(this, PropostaActivity.class);
         startActivity(intent);
     }
 

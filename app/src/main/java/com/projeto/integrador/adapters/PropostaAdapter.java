@@ -84,8 +84,11 @@ public class PropostaAdapter extends RecyclerView.Adapter<PropostaAdapter.Propos
     @Override
     public void onBindViewHolder(@NonNull PropostaViewHolder viewHolder, int i) {
 
-        viewHolder.descricaoServico.setText(lista.get(i).getDescricao());
+        viewHolder.nomeUsuario.setText("Nome do Usuário aqui");
+        viewHolder.descricaoServico.setText(lista.get(i).getDescricao() + " - Descrição da proposta aqui.");
+        viewHolder.nomeFazenda.setText("Nome da Fazenda");
         viewHolder.prazoServico.setText(lista.get(i).getPrazo());
+
     }
 
     @Override

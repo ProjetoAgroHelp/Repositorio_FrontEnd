@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="Prazo de execução:"
+            android:text="Prazo para execução:"
             android:textColor="#000000"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
@@ -119,18 +119,6 @@
             android:text="nome da fazenda"
             app:layout_constraintStart_toEndOf="@+id/textView11"
             app:layout_constraintTop_toBottomOf="@+id/descricaoServico_postFeed" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="dias"
-            android:textColor="#000"
-            app:layout_constraintStart_toEndOf="@+id/prazoServico_postFeed"
-            app:layout_constraintTop_toBottomOf="@+id/nomeFazenda_postFeed" />
-
 
     </android.support.constraint.ConstraintLayout>
 
