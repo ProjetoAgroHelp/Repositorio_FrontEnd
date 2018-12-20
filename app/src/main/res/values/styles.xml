@@ -16,7 +16,7 @@
 
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar"> coloquei isso só para lembrar
 
-    <!--
+    <!-
 
     <item name="windowNoTitle">true</item>
     <item name="windowActionBar">false</item>
