@@ -1,9 +1,13 @@
 package com.projeto.integrador.domain;
 
 
+
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 public class Proposta implements Serializable {
+
 
     private String descricao;
     private String prazo;
